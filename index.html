@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jash Ladhani - Portfolio</title>
+    <title>Jash Ladhani Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -717,7 +717,7 @@
             <p class="hero-subtitle">ML Engineer specializing in data-driven solutions, backend development, and GenAI applications.</p>
             
             <div class="contact-info-compact">
-                <span>CGPA: 3.55/4</span>
+                <span>CGPA: 3.57/4</span>
                 <span>•</span>
                 <span><a href="mailto:jashladhani07@gmail.com">jashladhani07@gmail.com</a></span>
                 <span>•</span>
@@ -934,7 +934,7 @@
                 <ul class="skill-list">
                     <li>FastAPI, REST APIs</li>
                     <li>Render, Vercel, Firebase</li>
-                    <li>Node.js, Git</li>
+                    <li>Git</li>
                 </ul>
             </div>
 
@@ -1002,6 +1002,18 @@
                 </div>
                 <p style="margin-top: 1rem; color: var(--text-secondary);">Earned foundational certification in artificial intelligence concepts, applications, and ethical considerations through IBM SkillsBuild.</p>
             </div>
+
+            <div class="compact-item fade-in-section">
+                <h3 class="compact-title serif">Machine Learning A-Z: AI, Python & R</h3>
+                <div class="compact-meta">
+                    <span>Udemy</span>
+                    <span>Lifetime Validity</span>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">Comprehensive course covering supervised and unsupervised learning, regression, classification, clustering, dimensionality reduction, and model selection using Python and R.</p>
+                <div style="margin-top: 1rem;">
+                    <a href="https://drive.google.com/file/d/1yL0EThY4nBkuZcrOEXdUQ9Ms1YyFiELa/view?usp=drive_link" target="_blank" class="know-more-btn">View Certificate →</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1033,10 +1045,10 @@
             'box-office': {
                 title: 'Box Office Revenue Prediction',
                 meta: 'Machine Learning • Jul 15 - Jul 24, 2025',
-                tags: ['Python', 'Scikit-learn', 'XGBoost', 'Feature Engineering'],
-                description: 'Designed an end-to-end ML pipeline for pre-release box office revenue forecasting on real-world TMDB data. Implemented comprehensive feature engineering and tuned ensemble models using XGBoost.',
-                pipeline: 'Data Collection → Feature Engineering → Model Training (Linear Regression, Random Forest, XGBoost) → Hyperparameter Tuning → Model Evaluation → Deployment',
-                results: 'Achieved best performance with R² = 0.77, MAE = $43.9M after rigorous hyperparameter tuning. Corresponding Author & Presenter of peer-reviewed paper at DACS 2025 Conference.',
+                tags: ['Python', 'Scikit-learn', 'XGBoost', 'Feature Engineering', 'TMDB API'],
+                description: 'Designed and built an end-to-end ML pipeline for pre-release box office revenue forecasting using real-world TMDB data. Engineered 20+ features from metadata available before a film\'s release genre, cast popularity, budget, release timing, production company, runtime, and more. Benchmarked 9 models total: 3 regression baselines (Linear, Lasso, Ridge Regression), 3 untuned ensemble models (Gradient Boosting, Random Forest, XGBoost), and 3 tuned ensemble models (Gradient Boosting, Random Forest, XGBoost) via GridSearchCV all evaluated using 5-fold cross-validation.',
+                pipeline: 'Data Collection (TMDB API) → Data Cleaning & EDA → Feature Engineering (20+ features: genre encoding, release month, cast popularity, budget scaling, runtime, production company) → Model Training (Linear, Lasso, Ridge → GB, RF, XGBoost → Tuned GB, Tuned RF, Tuned XGBoost) → 5-Fold Cross Validation → Hyperparameter Tuning (GridSearchCV) → Model Evaluation & Comparison → Results',
+                results: 'Tuned XGBoost achieved the best performance across all 9 models: R² = 0.77, MAE = $43.9M, RMSE = $62.1M. Untuned baselines served as benchmarks tuning consistently improved ensemble performance. Corresponding Author and Presenter of the peer-reviewed paper "Box Office Revenue Prediction: An Ensemble Learning Approach with Feature Engineering and Comprehensive Evaluation" at DACS 2025 International Conference.',
                 video: false,
                 links: [
                     { text: 'GitHub Repository', url: 'https://github.com/JashLadhani07/box-office-revenue-prediction.git' }
@@ -1045,22 +1057,22 @@
             'rag': {
                 title: 'Multi-Document RAG Evaluation Framework',
                 meta: 'GenAI • Oct 20, 2025 - Jan 11, 2026',
-                tags: ['LangChain', 'ChromaDB', 'FastAPI', 'SQL', 'Streamlit'],
-                description: 'Built a multi-document RAG evaluation pipeline benchmarking GPT-3.5, Claude-3 Haiku, and Gemini-2 Pro. Designed novel evaluation metrics combining faithfulness, relevancy, statistical testing, and effect size analysis.',
-                pipeline: 'Document Ingestion → Vector Embedding (ChromaDB) → RAG Pipeline (LangChain) → Multi-Model Inference → Statistical Analysis (t-tests, Cohen\'s d) → Performance Dashboard',
-                results: 'Quantified behavioral differences across models with comprehensive statistical backing. Built scalable backend with FastAPI and interactive Streamlit dashboard. Corresponding Author & Presenter at WCSC 2026 Conference.',
+                tags: ['LangChain', 'ChromaDB', 'FastAPI', 'Streamlit', 'SQL', 'GPT-3.5', 'Claude-3 Haiku', 'Gemini 2 Pro'],
+                description: 'Built a standardized multi-document RAG evaluation pipeline to benchmark GPT-3.5, Claude-3 Haiku, and Gemini 2 Pro under identical retrieval and inference conditions. Evaluated models on 5 metrics 2 existing (Faithfulness, Relevancy) and 3 novel metrics designed for this framework: Context Degradation (how answer quality drops as retrieved context worsens), Answer Coverage (how completely the response addresses the query), and Chunk Efficiency (how effectively the model uses retrieved chunks). Statistical significance testing using t-tests and Cohen\'s d was applied to quantify behavioral differences beyond surface-level averages.',
+                pipeline: 'Document Ingestion → Chunking Strategy → Vector Embedding (ChromaDB) → RAG Pipeline (LangChain) → Multi-Model Inference (GPT-3.5, Claude-3 Haiku, Gemini 2 Pro) → Metric Evaluation (Faithfulness, Relevancy existing; Context Degradation, Answer Coverage, Chunk Efficiency novel) → Statistical Significance Testing (t-tests, Cohen\'s d) → Results Dashboard (Streamlit) → Storage (SQL)',
+                results: 'Key findings: Chunk Efficiency was the only metric with statistically significant differences Claude vs GPT-3.5: Diff = 0.047, Cohen\'s d = 1.033, p = 0.033 (*); Gemini vs GPT-3.5: Diff = 0.046, Cohen\'s d = 0.969, p = 0.044 (*). Faithfulness and Relevancy showed no significant differences across models (p > 0.05), indicating models perform comparably on surface-level quality but diverge in how efficiently they utilise retrieved context. Corresponding Author and Presenter of the peer-reviewed paper "Comparative Evaluation of Large Language Models in Multi-Document Retrieval-Augmented Generation Systems" at WCSC 2026 International Conference.',
                 video: false,
                 links: [
                     { text: 'GitHub Repository', url: 'https://github.com/JashLadhani07/RAG-Evaluation-Chatbot.git' }
                 ]
             },
             'alphacross': {
-                title: 'AlphaCross — AI Trading Signal Analyzer',
+                title: 'AlphaCross AI Trading Signal Analyzer',
                 meta: 'Full Stack • Finance • Aug 11, 2025 - Jan 20, 2026',
-                tags: ['XGBoost', 'FastAPI', 'React', 'Finance'],
-                description: 'Built an end-to-end AI trading signal platform for NSE 500 stocks using historical market data. Trained XGBoost classifier to predict bullish/bearish MA crossovers within 3-day horizon.',
-                pipeline: 'Market Data Collection → Feature Engineering (Technical Indicators) → XGBoost Training → Backtesting → FastAPI Backend → React Dashboard → Deployment',
-                results: 'Achieved 78% accuracy with robust backtesting. Won Techniverse Hackathon 2025 (1st place). Implemented scalable FastAPI backend with EMA-based backtesting, detailed trade logs, and React dashboard.',
+                tags: ['XGBoost', 'FastAPI', 'React', 'yfinance', 'EMA', 'Backtesting'],
+                description: 'Built an end-to-end AI-powered trading signal platform for NSE 500 stocks using historical market data sourced via yfinance. The system predicts bullish/bearish moving average crossover signals within a 3-day horizon using a trained XGBoost classifier. Features a stateless FastAPI backend with EMA-based backtesting, detailed trade logs, a React dashboard for signal visualization, and a GenAI chatbot for trade explanation.',
+                pipeline: 'Market Data Collection (yfinance, NSE 500) → Feature Engineering (EMA, RSI, MACD, volume indicators) → XGBoost Classifier Training → Backtesting Engine (EMA crossover strategy) → Trade Log Generation → FastAPI Backend (stateless REST APIs) → React Dashboard → GenAI Chatbot Integration → Deployment (Vercel)',
+                results: 'XGBoost classifier achieved 78% accuracy under backtesting across NSE 500 stocks. Won 1st place at the Techniverse Hackathon 2025 (Data Mavericks track). Presented at WCSC 2026 International Conference. The platform supports live signal generation, historical trade replay, and natural language trade explanations via the integrated GenAI chatbot.',
                 video: false,
                 links: [
                     { text: 'Live Demo', url: 'https://alpha-cross-an-ai-powered-moving-av.vercel.app/' },
@@ -1070,30 +1082,30 @@
             'nexaflo': {
                 title: 'Artificial Intelligence Intern',
                 meta: 'Nexaflo Automations • Apr 2026 - Jun 2026',
-                tags: ['FastAPI', 'LLaMA 3.3 70B', 'Groq', 'OCR', 'Node.js', 'Express', 'SQLite', 'Python'],
-                description: 'Working at Nexaflo Automations, an AI startup, contributing directly to their flagship product. Owned end-to-end system design across two production-grade systems from schema design and API architecture to AI integration and deployment, with zero legacy codebase.',
-                pipeline: 'N/A',
-                results: 'Built two production-grade systems forming 30% of the flagship product. <br> (1) Nexaflo CV Parser: Multi-format document ingestion pipeline (PDF/DOCX/TXT + OCR fallback) with regex-based skill extraction, structured candidate data storage in SQLite, search by skill, and Excel/JSON export. <br><br> (2) Career Intelligence System: LLM-powered career roadmap generator using LLaMA 3.3 70B via Groq. Users complete a 7-step profile form; the AI returns a tiered career map with match %, salary ranges, work-life ratings, skill gaps, and stepping stones.',
+                tags: ['FastAPI', 'LLaMA 3.3 70B', 'Groq', 'OCR', 'Node.js', 'Express', 'SQLite', 'Python', 'pdf-parse'],
+                description: 'Working at Nexaflo Automations, an AI startup, contributing directly to production-grade systems that form part of their flagship product. Owned end-to-end system design across two independent systems schema design, API architecture, AI integration, and deployment with zero legacy codebase to build on. Both systems were shipped to production.',
+                pipeline: 'System 1 CV Parser: Resume Upload (PDF/DOCX/TXT) → Format Detection → Text Extraction (pdf-parse / docx parser / OCR fallback for image-based PDFs) → Regex-based Section Parsing (Name, Contact, Skills, Education, Experience, Projects) → Structured Storage (SQLite) → Search API (by skill/name) → Export (Excel/JSON) → Stats Dashboard (skill frequency across all CVs). System 2 Career Intelligence: 7-Step User Form (background, intentions, work-life preference, goals, income, identity, industries, location, company size) → Prompt Engineering → LLaMA 3.3 70B via Groq API → Tiered Career Map (Immediate Fit → Growth Path → Aspirational Roles) → Role cards with match %, salary range, work-life rating, skill gaps, and stepping stones.',
+                results: 'CV Parser contributes to ~30% of the flagship Nexaflo product. Fully local pipeline no LLM APIs, no Ollama purely regex and rule-based with OCR fallback, making it lightweight and deployable anywhere. Career Intelligence system delivers personalized role recommendations with salary benchmarks and skill gap analysis powered by LLaMA 3.3 70B (Groq free tier), keeping operational costs at zero.',
                 video: false,
                 links: []
             },
             'qa-intern': {
-                title: 'Data Engineering Intern - Automation & QA Analytics System',
+                title: 'Data Engineering Intern Automation & QA Analytics System',
                 meta: 'Universal Electronics Inc. • Jun 17, 2025 - Sep 26, 2025',
-                tags: ['Python', 'Pandas', 'Automation', 'Excel', 'Smart Home Technology'],
-                description: 'Completed a Data Engineering Internship at Universal Electronics, where I built a production-used Python automation system to analyze and summarize Excel-based QA test reports. Developed an end-to-end pipeline for data parsing, failure categorization, and version-wise analysis using pandas, regex, and Tkinter.',
-                pipeline: 'Excel Data Ingestion → Regex Parsing → Pandas Transformation → Automated Categorization → Report Generation → GUI (Tkinter)',
-                results: 'Improved reporting efficiency and accuracy by 40%. Gained hands-on experience in automation frameworks, data engineering workflows, and building user-facing tools for internal teams.',
+                tags: ['Python', 'Pandas', 'Regex', 'Tkinter', 'Excel Automation'],
+                description: 'Built a production-used Python automation system at Universal Electronics to analyze and summarize Excel-based QA test reports. The company was manually reviewing QA reports across multiple product versions the system replaced that entirely. Developed an end-to-end pipeline for data parsing, failure categorization, and version-wise analysis using pandas and regex, with a Tkinter GUI for internal team use.',
+                pipeline: 'Excel File Ingestion → Regex-based Data Parsing → Failure Categorization (by type, version, module) → Pandas Transformation & Aggregation → Automated Summary Report Generation → Tkinter GUI (drag-and-drop interface for non-technical QA staff) → Output (formatted Excel report)',
+                results: 'Improved reporting efficiency and accuracy by 40%. The system was adopted across 3 internal modules and eliminated manual QA report processing. Collaborated with QA engineers to refine categorization rules and ensure version tracking accuracy across product releases.',
                 video: false,
                 links: []
             },
             'charge': {
-                title: 'Charge D\'Affaires, MPSTME MUN Society (MUNSOC)',
+                title: 'Charge D\'Affaires MPSTME MUN Society (MUNSOC)',
                 meta: 'Leadership • Aug 15, 2022 - Jul 15, 2025',
-                tags: [],
-                description: 'Served as Charge d\'Affaires for the MPSTME MUN Society, leading planning and execution of 6+ inter-department and inter-college MUN conferences. Coordinated logistics, delegate management, committee operations, and cross-team communication for events involving 100+ participants.',
+                tags: ['Leadership', 'Event Management', 'Public Speaking', 'Negotiation'],
+                description: "Served as Charge d'Affaires for the MPSTME Model United Nations Society for 3 years, leading the planning and execution of 6+ inter-department and inter-college MUN conferences. Led a core team of 100+ members and coordinated events with 650+ total participants across conferences. Responsible for end-to-end event logistics, delegate management, committee operations, and cross-team communication.",
                 pipeline: 'N/A',
-                results: 'Developed leadership, public speaking, negotiation, and organizational skills while working closely with faculty advisors and student leadership teams.',
+                results: 'Successfully organised 6+ MUN conferences across 3 years, collectively engaging 650+ participants. Led a 100+ member organising team. Developed strong skills in leadership, public speaking, negotiation, crisis management, and cross-functional coordination while working with faculty advisors and student leadership teams.',
                 video: false,
                 links: []
             }
@@ -1192,14 +1204,15 @@
 
         // Intersection Observer for scroll animations
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0,
+            rootMargin: '0px 0px 0px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -1208,6 +1221,13 @@
         document.querySelectorAll('.fade-in-section, .compact-item, .skill-card').forEach(el => {
             observer.observe(el);
         });
+
+        // Fallback: force all visible after 1 second in case observer fails
+        setTimeout(() => {
+            document.querySelectorAll('.fade-in-section, .compact-item, .skill-card').forEach(el => {
+                el.classList.add('visible');
+            });
+        }, 1000);
 
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
