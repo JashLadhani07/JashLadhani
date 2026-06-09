@@ -818,6 +818,26 @@
         </div>
 
         <div class="compact-grid">
+            <div class="compact-item fade-in-section" onclick="openModal('nexaflo')">
+                <div class="compact-header">
+                    <div>
+                        <h3 class="compact-title serif">Artificial Intelligence Intern</h3>
+                        <div class="compact-meta">
+                            <span>Nexaflo Automations</span>
+                            <span>Apr 2026 - Jun 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="compact-tags">
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">LLaMA 3.3 70B</span>
+                    <span class="tag">Groq</span>
+                    <span class="tag">OCR</span>
+                    <span class="tag">Node.js</span>
+                </div>
+                <a href="#" class="know-more-btn" onclick="event.stopPropagation(); openModal('nexaflo')">Know more →</a>
+            </div>
+
             <div class="compact-item fade-in-section" onclick="openModal('qa-intern')">
                 <div class="compact-header">
                     <div>
@@ -864,7 +884,7 @@
                 <span>Mumbai, India</span>
                 <span>Expected 2027</span>
             </div>
-            <p style="margin-top: 1rem; color: var(--text-secondary);">CGPA: 3.55/4 | Relevant Coursework: Data Structures & Algorithms, Artificial Intelligence, Probability & Statistics, DBMS</p>
+            <p style="margin-top: 1rem; color: var(--text-secondary);">CGPA: 3.57/4 | Relevant Coursework: Data Structures & Algorithms, Artificial Intelligence, Probability & Statistics, DBMS</p>
         </div>
     </section>
 
@@ -914,7 +934,7 @@
                 <ul class="skill-list">
                     <li>FastAPI, REST APIs</li>
                     <li>Render, Vercel, Firebase</li>
-                    <li>Git</li>
+                    <li>node.js, Git</li>
                 </ul>
             </div>
 
@@ -1047,6 +1067,16 @@
                     { text: 'GitHub Repository', url: 'https://github.com/JashLadhani07/AlphaCross---AI-Powered-Moving-Average-Crossover-Analyzer.git' }
                 ]
             },
+            'nexaflo': {
+                title: 'Artificial Intelligence Intern',
+                meta: 'Nexaflo Automations • Apr 2026 - Jun 2026',
+                tags: ['FastAPI', 'LLaMA 3.3 70B', 'Groq', 'OCR', 'Node.js', 'Express', 'SQLite', 'Python'],
+                description: 'Working at Nexaflo Automations, an AI startup, contributing directly to their flagship product. Owned end-to-end system design across two production-grade systems from schema design and API architecture to AI integration and deployment, with zero legacy codebase.',
+                pipeline: 'N/A',
+                results: 'Built two production-grade systems forming 30% of the flagship product. (1) Nexaflo CV Parser: Multi-format document ingestion pipeline (PDF/DOCX/TXT + OCR fallback) with regex-based skill extraction, structured candidate data storage in SQLite, search by skill, and Excel/JSON export. <br> (2) Career Intelligence System: LLM-powered career roadmap generator using LLaMA 3.3 70B via Groq. Users complete a 7-step profile form; the AI returns a tiered career map with match %, salary ranges, work-life ratings, skill gaps, and stepping stones.',
+                video: false,
+                links: []
+            },
             'qa-intern': {
                 title: 'Data Engineering Intern - Automation & QA Analytics System',
                 meta: 'Universal Electronics Inc. • Jun 17, 2025 - Sep 26, 2025',
@@ -1139,7 +1169,7 @@
 
         // Download Resume Function
         function downloadResume() {
-            window.open('https://drive.google.com/file/d/1zBiiK24T95SL_jEskH0Me2ggzskyizcx/view?usp=sharing', '_blank');
+            window.open('https://drive.google.com/file/d/1jsSioBI187aunga6F7hg4HLyBgKbuH4N/view?usp=drive_link', '_blank');
         }
 
         // Mobile Menu Toggle
